@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Service manager AriLine</title>
+	<title>TRUMPETER Airline API Service Manager</title>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="../public/lib/jquery.min.js"></script>
 	<style type="text/css">
 	</style>
 </head>
 <body>
-	<h1>Service manager AriLine</h1>
+	<h1>TRUMPETER Airline API Service Manager</h1>
 	<h4>All function support</h4>
 	<ul>
-		<li><a href="../public/resource/document/introduce.docx" target="blank">document</a></li>
+		<li><a href="../public/resource/document/introduce.docx" target="blank">Document</a></li>
 		<li><a href="../public/resource/document/1.png" target="blank">Trả về các mã sân bay đi có trong CSDL</a></li>
 		<li><a href="../public/resource/document/2.png" target="blank">Trả về các mã sân bay đến tương ứng với sân bay đi có trong CSDL</a></li>
 		<li><a href="../public/resource/document/3.png" target="blank">Tạo đặt chỗ mới</a></li>

@@ -16,6 +16,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
     <!-- /GOOGLE FONTS -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="lib/chosen-bootstrap/chosen-bootstrap.css">
+
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -70,29 +72,29 @@
                                                 <form>
                                                     <div class="tabbable">
                                                         <ul class="nav nav-pills nav-sm nav-no-br mb10" id="flightChooseTab">
-                                                            <li class="active"><a href="#flight-search-2" data-toggle="tab">Một chiều</a>
+                                                            <li class="active"><a href="#flight-search-1" data-toggle="tab">Một chiều</a>
                                                             </li>
-                                                            <li><a href="#flight-search-1" data-toggle="tab">Khứ hồi</a>
+                                                            <li><a href="#flight-search-2" data-toggle="tab">Khứ hồi</a>
                                                             </li>
 
                                                         </ul>
                                                         <div class="tab-content">
-                                                            <div class="tab-pane fade in active" id="flight-search-1">
+                                                            <div class="tab-pane fade" id="flight-search-2">
                                                                 <div class="row">
                                                                     <div class="col-md-6">
                                                                         <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
                                                                             <label>Từ</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+                                                                            <input class="typeahead form-control" placeholder="Sân bay đi" type="text" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
                                                                             <label>Đến</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+                                                                            <input class="typeahead form-control" placeholder="Sân bay đến" type="text" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="input-daterange" data-date-format="M d, D">
+                                                                <div class="input-daterange" data-date-format="yyyy-mm-dd">
                                                                     <div class="row">
                                                                         <div class="col-md-3">
                                                                             <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
@@ -138,18 +140,24 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="tab-pane fade" id="flight-search-2">
+
+                                                            <div class="tab-pane fade in active" id="flight-search-1">
                                                                 <div class="row">
                                                                     <div class="col-md-6">
-                                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+                                                                        <div class="form-group form-group-lg form-group-icon-left"><i></i>
                                                                             <label>Từ</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+                                                                            <select id="from" class="chosen-rtl" data-placeholder="Chọn sân bay đi" style="width:350px;">
+                                                                                <option value=""></option>
+                                                                             </select>
+                                                                            <!-- <input class="typeahead form-control" placeholder="sân bay đi" type="text" /> -->
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6">
-                                                                        <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
-                                                                            <label>Đến</label>
-                                                                            <input class="typeahead form-control" placeholder="City, Airport, U.S. Zip" type="text" />
+                                                                        <div class="form-group form-group-lg form-group-icon-left"><i></i>
+                                                                           <label>đến</label>
+                                                                            <select id="to" class="chosen-rtl" data-placeholder="Chọn sân bay đến" style="width:350px;">
+                                                                                <option value=""></option>
+                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -157,10 +165,10 @@
                                                                     <div class="col-md-3">
                                                                         <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
                                                                             <label>Ngày đi</label>
-                                                                            <input class="date-pick form-control" data-date-format="M d, D" type="text" />
+                                                                            <input class="date-pick form-control" data-date-format="yyyy-mm-dd" type="text" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-5">
                                                                         <div class="form-group form-group-lg form-group-select-plus">
                                                                             <label>Hành khách</label>
                                                                             <div class="btn-group btn-group-select-num" data-toggle="buttons">
@@ -189,7 +197,19 @@
                                                                             </select>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+
+                                                                     <div class="col-md-4">
+                                                                        <div class="form-group form-group-lg form-group-select-plus">
+                                                                            <label>Hang vé</label>
+                                                                            <select class="form-control">
+                                                                                <option>Y</option>
+                                                                                <option>C</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div> 
                                                             </div>
                                                         </div>
                                                     </div>
@@ -278,7 +298,15 @@
         <script src="js/tweet.js"></script>
         <script src="js/countdown.js"></script>
         <script src="js/gridrotator.js"></script>
+
+        <script src="js/helper.js"></script>
+        <script src="js/ariline-server.js"></script>
+
+        <script src="lib/chosen-bootstrap/chosen-bootstrap.js"></script>
+        <script src="lib/cookie/jquery.cookie.js"></script>
+
         <script src="js/custom.js"></script>
+        <script src="js/search.js"></script>
     </div>
 </body>
 

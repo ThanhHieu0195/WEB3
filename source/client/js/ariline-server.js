@@ -1,7 +1,7 @@
 var SERVER = "../server/api/";
 var FLINGTS = "flights.html";
 var PAYMENT = "flight-payment-unregistered.html";
-SUCCESS_PAYMENT = "success-payment.html";
+var SUCCESS_PAYMENT = "success-payment.html";
 // chứa data lấy từ server về
 var adata = [];
 // chứa trạng thái của request
@@ -97,10 +97,10 @@ function tim_kiem_chuyen_bay(sanbayden, sanbaydi, ngay, soluong) {
 			adata = jQuery.parseJSON(data);
 			var arr = adata.DATA;
 			var html = "";
-			var fm = '<li><div class="booking-item-container"><div class="booking-item"><div class="row"><div class="col-md-2"><div class="booking-item-airline-logo"><img src="img/lufthansa.jpg" alt="Image Alternative text" title="Image Title" /><p>Chuyến đi</p></div></div><div class="col-md-5"><div class="booking-item-flight-details"><div class="booking-item-departure"><i class="fa fa-plane"></i><h5>{0}</h5><p class="booking-item-date">{1}</p><p class="booking-item-destination">{2}</p></div></div></div><div class="col-md-2"><h5>{3}</h5><p>{4}</p></div><div class="col-md-3"><span>{5}VND</span><span>/person</span><p class="booking-item-flight-class">Class: Economy</p><a class="btn btn-primary" onclick="select()" href="#">Select</a></div></div></div></div></li>';
+			var fm = '<li><div class="booking-item-container"><div class="booking-item"><div class="row"><div class="col-md-2"><div class="booking-item-airline-logo"><img src="img/lufthansa.jpg" alt="Image Alternative text" title="Image Title" /><p>Chuyến đi</p></div></div><div class="col-md-5"><div class="booking-item-flight-details"><div class="booking-item-departure"><i class="fa fa-plane"></i><h5>{0}</h5><p class="booking-item-date">{1}</p><p class="booking-item-destination">{2}</p></div></div></div><div class="col-md-2"><h5>{3}</h5><p>{4}</p></div><div class="col-md-3"><span>{5}VND</span><span>/person</span><p class="booking-item-flight-class">Class: Economy</p><a class="btn btn-primary" onclick="select({5})" href="#">Select</a></div></div></div></div></li>';
 			for (var i = 0; i < arr.length; i++) {
 				var obj = arr[i];
-				html += String.format(fm, obj.gio, obj.ngay, obj.noidi + " - " +  obj.noiden, "20h 30m", "non stop", obj.giaban, obj);
+				html += String.format(fm, obj.gio, obj.ngay, $.cookie('detail_from') + " - " +  $.cookie('detail_to'), "20h 30m", "non stop", obj.giaban);
 			}
 			$('.booking-list').html(html);
 		}

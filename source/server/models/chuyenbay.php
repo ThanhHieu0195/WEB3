@@ -31,7 +31,9 @@
 		}
 
 		public function tim_chuyen_bay($noidi, $noiden, $ngay, $soluonghanhkhach) {
-			$sql = "SELECT * FROM `chuyenbay` WHERE `noidi` LIKE '$noidi' AND `noiden` LIKE '$noiden' AND `ngay` = '$ngay' AND `soluongghe` >= $soluonghanhkhach;";
+			$sql = "SELECT * 
+				FROM `chuyenbay` 
+				WHERE `noidi` LIKE '$noidi' AND `noiden` LIKE '$noiden' AND `ngay` = '$ngay' AND `soluongghe` >= $soluonghanhkhach;";
 			$this->setQuery($sql);
 			$result = $this->query();
 			$arr = array();

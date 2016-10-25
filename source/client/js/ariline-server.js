@@ -1,6 +1,7 @@
 var SERVER = "../server/api/";
 var FLINGTS = "flights.html";
-var PAYING = "flight-payment-unregistered.html";
+var PAYMENT = "flight-payment-unregistered.html";
+SUCCESS_PAYMENT = "success-payment.html";
 // chứa data lấy từ server về
 var adata = [];
 // chứa trạng thái của request
@@ -106,10 +107,17 @@ function tim_kiem_chuyen_bay(sanbayden, sanbaydi, ngay, soluong) {
 	});
 }
 
-function select() {
-	console.log(1);
-	window.location = PAYING;
+
+function tao_dat_cho(tongtien) {
+	var path = SERVER + "datcho/";
+	$.post(path, {tongtien: tongtien}, function(data, textStatus, xhr) {
+		json = jQuery.parseJSON(data);
+		if (textStatus == "success") {
+			$.cookie('madatcho', json.DATA.ma);
+		}
+	});
 }
+
 // giao diện đặt chô
 
 

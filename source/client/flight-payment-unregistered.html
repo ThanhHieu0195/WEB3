@@ -60,165 +60,14 @@
                 <div class="col-md-8">
                     <h3>Hành khách</h3>
                     <p>Trước khi nhập thông tin cá nhân, quý khách vui lòng đọc và chấp nhận các điều khoản về  <a href="#">Bảo mật thông tin </a>.</p>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Họ và tên</label>
-                                    <input class="form-control" type="text" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Số điện thoại</label>
-                                    <input class="form-control" type="text" />
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>E-mail</label>
-                                    <input class="form-control" type="text" />
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="checkbox">-->
-                            <!--<label>-->
-                                <!--<input class="i-check" type="checkbox" checked/>Create Traveler account <small>(password will be send to your e-mail)</small>-->
-                            <!--</label>-->
-                        <!--</div>-->
+                    <form id="fdata">
                     </form>
-                    <div class="gap gap-small"></div>
-                    <h3>Thông tin khách hàng</h3>
-                    <ul class="list booking-item-passengers">
-                        <li>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>Giới tính</label>
-                                    <div class="radio-inline radio-small">
-                                        <label>
-                                            <input class="i-radio" type="radio" name="passenger-1-sex" />Nam</label>
-                                    </div>
-                                    <div class="radio-inline radio-small">
-                                        <label>
-                                            <input class="i-radio" type="radio" name="passenger-1-sex" />Nữ</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Tên</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Họ</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Ngày sinh</label>
-                                        <input class="date-pick-years form-control" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 col-md-offset-3">
-                                    <div class="form-group">
-                                        <label>Điện thoại</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Thành phố</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label>Giới tính</label>
-                                    <div class="radio-inline radio-small">
-                                        <label>
-                                            <input class="i-radio" type="radio" name="passenger-2-sex" />Nam</label>
-                                    </div>
-                                    <div class="radio-inline radio-small">
-                                        <label>
-                                            <input class="i-radio" type="radio" name="passenger-2-sex" />Nữ</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Tên</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Họ</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Ngày sinh</label>
-                                        <input class="date-pick-years form-control" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 col-md-offset-3">
-                                    <div class="form-group">
-                                        <label>Điện thoại</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Thành phố</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+
                     <div class="gap gap-small"></div>
                     <div class="row">
                         <div class="col-md-6">
                             <img class="pp-img" src="img/paypal.png" alt="Image Alternative text" title="Image Title" />
-                            <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p><a class="btn btn-primary">Checkout via Paypal</a>	
-                        </div>
-                        <div class="col-md-6">
-                            <form class="cc-form">
-                                <div class="clearfix">
-                                    <div class="form-group form-group-cc-number">
-                                        <label>Card Number</label>
-                                        <input class="form-control" placeholder="xxxx xxxx xxxx xxxx" type="text" /><span class="cc-card-icon"></span>
-                                    </div>
-                                    <div class="form-group form-group-cc-cvc">
-                                        <label>CVC</label>
-                                        <input class="form-control" placeholder="xxxx" type="text" />
-                                    </div>
-                                </div>
-                                <div class="clearfix">
-                                    <div class="form-group form-group-cc-name">
-                                        <label>Cardholder Name</label>
-                                        <input class="form-control" type="text" />
-                                    </div>
-                                    <div class="form-group form-group-cc-date">
-                                        <label>Valid Thru</label>
-                                        <input class="form-control" placeholder="mm/yy" type="text" />
-                                    </div>
-                                </div>
-                                <div class="checkbox checkbox-small">
-                                    <label>
-                                        <input class="i-check" type="checkbox" checked/>Add to My Cards</label>
-                                </div>
-                                <input class="btn btn-primary" type="submit" value="Proceed Payment" />
-                            </form>
+                            <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p><a class="btn btn-primary" onclick="checkout();">Checkout via Paypal</a>	
                         </div>
                     </div>
                 </div>
@@ -371,7 +220,15 @@
         <script src="js/tweet.js"></script>
         <script src="js/countdown.js"></script>
         <script src="js/gridrotator.js"></script>
+        
+        <script src="lib/cookie/jquery.cookie.js"></script>
+
+        <script src="js/helper.js"></script>
+        <script src="js/ariline-server.js"></script>
+
         <script src="js/custom.js"></script>
+        <script src="js/payment.js"></script>
+
     </div>
 </body>
 

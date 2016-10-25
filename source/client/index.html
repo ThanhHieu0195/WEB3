@@ -165,7 +165,7 @@
                                                                     <div class="col-md-3">
                                                                         <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
                                                                             <label>Ngày đi</label>
-                                                                            <input class="date-pick form-control" data-date-format="yyyy-mm-dd" type="text" />
+                                                                            <input id="date" class="date-pick form-control" data-date-format="yyyy-mm-dd" type="text" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-5">
@@ -173,27 +173,21 @@
                                                                             <label>Hành khách</label>
                                                                             <div class="btn-group btn-group-select-num" data-toggle="buttons">
                                                                                 <label class="btn btn-primary active">
-                                                                                    <input type="radio" name="options" />1</label>
+                                                                                    <input type="radio" name="options" value="1" />1</label>
                                                                                 <label class="btn btn-primary">
-                                                                                    <input type="radio" name="options" />2</label>
+                                                                                    <input type="radio" name="options" value="2"/>2</label>
                                                                                 <label class="btn btn-primary">
-                                                                                    <input type="radio" name="options" />3</label>
+                                                                                    <input type="radio" name="options" value="3"/>3</label>
                                                                                 <label class="btn btn-primary">
-                                                                                    <input type="radio" name="options" />3+</label>
+                                                                                    <input type="radio" name="options" value="4"/>3+</label>
                                                                             </div>
-                                                                            <select class="form-control hidden">
-                                                                                <option>1</option>
+                                                                            <select id="num" class="form-control hidden">
+                                                                                <option selected="selected">1</option>
                                                                                 <option>2</option>
                                                                                 <option>3</option>
-                                                                                <option selected="selected">4</option>
+                                                                                <option>4</option>
                                                                                 <option>5</option>
                                                                                 <option>6</option>
-                                                                                <option>7</option>
-                                                                                <option>8</option>
-                                                                                <option>9</option>
-                                                                                <option>10</option>
-                                                                                <option>11</option>
-                                                                                <option>12</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -201,7 +195,7 @@
                                                                      <div class="col-md-4">
                                                                         <div class="form-group form-group-lg form-group-select-plus">
                                                                             <label>Hang vé</label>
-                                                                            <select class="form-control">
+                                                                            <select class="form-control" id="level">
                                                                                 <option>Y</option>
                                                                                 <option>C</option>
                                                                             </select>
@@ -213,7 +207,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <button class="btn btn-primary btn-lg" type="submit">TÌM CHUYẾN BAY</button>
+                                                    <button class="btn btn-primary btn-lg" id="search">TÌM CHUYẾN BAY</button>
                                                 </form>
                                             </div>
 

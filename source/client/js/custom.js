@@ -508,3 +508,7 @@ function abortTimer() { // to be called when you want to stop the timer
     clearInterval(tid);
 }
 
+$('input[name="options"]').change(function(event) {
+    /* Act on the event */
+    $('#num').val(event.target.value);
+});

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2016 at 02:20 PM
+-- Generation Time: Oct 25, 2016 at 04:23 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.37
 
@@ -76,10 +76,21 @@ CREATE TABLE `chuyendi` (
 --
 
 INSERT INTO `chuyendi` (`masanbaydi`, `masanbayden`) VALUES
+('CAH', 'BMV'),
+('HAN', 'HIU'),
+('HIU', 'BMV'),
+('HIU', 'HAN'),
+('HIU', 'HPH'),
 ('HIU', 'SGN'),
+('HIU', 'TBB'),
+('HIU', 'VCA'),
+('HIU', 'VCL'),
+('HPH', 'SGN'),
 ('SGN', 'HIU'),
 ('SGN', 'TBB'),
-('TBB', 'SGN');
+('TBB', 'SGN'),
+('VCA', 'CAH'),
+('VCL', 'BMV');
 
 -- --------------------------------------------------------
 
@@ -99,16 +110,7 @@ CREATE TABLE `datcho` (
 --
 
 INSERT INTO `datcho` (`ma`, `thoigiandatcho`, `tongtien`, `trangthai`) VALUES
-('AAAAAA', '2016-10-01 00:00:00', 1000000, 1),
-('AAAAAB', '2016-10-23 12:51:22', 100, 0),
-('AAAAAC', '2016-10-23 12:52:00', 100, 0),
-('AAAAAD', '2016-10-23 12:52:43', 100, 0),
-('AAAAAE', '2016-10-23 13:39:45', 1000, 0),
-('AAAAAF', '2016-10-23 13:39:54', 1000, 0),
-('AAAAAG', '2016-10-23 13:42:59', 1000, 0),
-('AAAAAH', '2016-10-23 22:11:44', 1000, 0),
-('AAAAAI', '2016-10-25 18:06:39', 3, 0),
-('AAAAAJ', '2016-10-25 18:22:25', 3, 0);
+('AAAAAA', '2016-10-01 00:00:00', 1000000, 1);
 
 -- --------------------------------------------------------
 
@@ -148,9 +150,7 @@ CREATE TABLE `hanhkhach` (
 --
 
 INSERT INTO `hanhkhach` (`id`, `madatcho`, `danhxung`, `ho`, `ten`) VALUES
-(3, 'AAAAAA', 'Mr', 'Trần ', 'Hiếu'),
-(4, 'AAAAAA', 'Mr', 'Nguyen', 'Hằng'),
-(6, 'AAAAAA', 'Mr', 'Tr%E1%BA%A7n', 'Trung');
+(3, 'AAAAAA', 'Mr', 'Trần ', 'Hiếu');
 
 -- --------------------------------------------------------
 
@@ -208,9 +208,15 @@ CREATE TABLE `sanbay` (
 --
 
 INSERT INTO `sanbay` (`masanbay`, `mota`, `khuvuc`) VALUES
+('BMV', 'Buôn Ma Thuộc', 'vn'),
+('CAH', 'Cà Mau', 'vn'),
+('HAN', 'Hà Nội', 'vn'),
 ('HIU', 'Huế', 'vn'),
+('HPH', 'Hải Phòng', 'vn'),
 ('SGN', 'thành phố HCM', 'vn'),
-('TBB', 'Tụy Hòa', 'vn');
+('TBB', 'Tụy Hòa', 'vn'),
+('VCA', 'Cần Thơ', 'vn'),
+('VCL', 'Chu Lai', 'vn');
 
 --
 -- Indexes for dumped tables
@@ -286,7 +292,7 @@ ALTER TABLE `sanbay`
 -- AUTO_INCREMENT for table `hanhkhach`
 --
 ALTER TABLE `hanhkhach`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- Constraints for dumped tables
 --
